@@ -126,7 +126,7 @@ static iToastSettings *sharedSettings = nil;
 	
 	UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
 	
-	CGPoint point = CGPointMake(window.frame.size.width/2, window.frame.size.height/2);
+	CGPoint point;
 	
 	// Set correct orientation/location regarding device orientation
 	UIInterfaceOrientation orientation = (UIInterfaceOrientation)[[UIApplication sharedApplication] statusBarOrientation];
@@ -216,7 +216,7 @@ static iToastSettings *sharedSettings = nil;
 	
 	v.tag = CURRENT_TOAST_TAG;
 
-	UIview *currentToast = [window viewWithTag:CURRENT_TOAST_TAG];
+	UIView *currentToast = [window viewWithTag:CURRENT_TOAST_TAG];
 	if (currentToast != nil) {
     	[currentToast removeFromSuperview];
 	}
